@@ -11,6 +11,10 @@
 		3FE00DF229F6C138009281A5 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE00DE729F6C138009281A5 /* Networking.framework */; };
 		3FE00DF729F6C138009281A5 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00DF629F6C138009281A5 /* NetworkingTests.swift */; };
 		3FE00DF829F6C138009281A5 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE00DEA29F6C138009281A5 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3FE00E3929F6CC24009281A5 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E3829F6CC24009281A5 /* RequestProtocol.swift */; };
+		3FE00E3B29F6CD65009281A5 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E3A29F6CD65009281A5 /* RequestType.swift */; };
+		3FE00E3D29F94547009281A5 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E3C29F94547009281A5 /* NetworkError.swift */; };
+		3FE00E3F29F94786009281A5 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E3E29F94786009281A5 /* NetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		3FE00DEB29F6C138009281A5 /* Networking.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Networking.docc; sourceTree = "<group>"; };
 		3FE00DF129F6C138009281A5 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE00DF629F6C138009281A5 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
+		3FE00E3829F6CC24009281A5 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		3FE00E3A29F6CD65009281A5 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		3FE00E3C29F94547009281A5 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		3FE00E3E29F94786009281A5 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,10 @@
 			children = (
 				3FE00DEA29F6C138009281A5 /* Networking.h */,
 				3FE00DEB29F6C138009281A5 /* Networking.docc */,
+				3FE00E3C29F94547009281A5 /* NetworkError.swift */,
+				3FE00E3829F6CC24009281A5 /* RequestProtocol.swift */,
+				3FE00E3A29F6CD65009281A5 /* RequestType.swift */,
+				3FE00E3E29F94786009281A5 /* NetworkingManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -195,6 +207,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FE00DEC29F6C138009281A5 /* Networking.docc in Sources */,
+				3FE00E3D29F94547009281A5 /* NetworkError.swift in Sources */,
+				3FE00E3929F6CC24009281A5 /* RequestProtocol.swift in Sources */,
+				3FE00E3F29F94786009281A5 /* NetworkingManager.swift in Sources */,
+				3FE00E3B29F6CD65009281A5 /* RequestType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +412,7 @@
 		3FE00DFF29F6C138009281A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 964W23YLF9;
@@ -412,6 +429,7 @@
 		3FE00E0029F6C138009281A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 964W23YLF9;
