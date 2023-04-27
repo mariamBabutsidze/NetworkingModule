@@ -6,16 +6,23 @@
 //
 
 import SwiftUI
+import Networking
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            AnimalsListView(
+                viewModel: AnimalsListViewModel(
+                    animalFetcher: FetchAnimalsService(
+                        requestManager:
+                            NetworkingManager()
+                    )
+                )
+            )
+            .tabItem {
+                Label("Near you", systemImage: "location")
+            }
         }
-        .padding()
     }
 }
 

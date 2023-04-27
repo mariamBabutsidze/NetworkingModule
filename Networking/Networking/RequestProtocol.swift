@@ -7,26 +7,34 @@
 
 import Foundation
 
-protocol RequestProtocol {
+public protocol RequestProtocol {
     var host: String { get }
     var path: String { get }
     var headers: [String: String] { get }
-    var body: [String: Any]? { get }
-    var query: [String: String]? { get }
+    var body: [String: Any] { get }
+    var query: [String: String?] { get }
     var requestType: RequestType { get }
 }
 
-extension RequestProtocol {
+public extension RequestProtocol {
+    var body: [String: Any] {
+      [:]
+    }
+    
+    var query: [String: String?] {
+      [:]
+    }
+    
+    var headers: [String: String] {
+      [:]
+    }
     
     func createURLRequest() throws -> URLRequest {
         var components = URLComponents()
         components.scheme = "https"
         components.host = host
         components.path = path
-        
-        if query?.isEmpty == false {
-            components.queryItems = query?.map { URLQueryItem(name: $0, value: $1) }
-        }
+        components.queryItems = query.map { URLQueryItem(name: $0, value: $1) }
         
         guard let url = components.url else {
             throw NetworkError.invalidUrl
@@ -37,7 +45,7 @@ extension RequestProtocol {
         request.allHTTPHeaderFields = headers
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        if let body {
+        if !body.isEmpty && request.httpMethod != RequestType.GET.rawValue {
             request.httpBody = try JSONSerialization.data(withJSONObject: body)
         }
         return request

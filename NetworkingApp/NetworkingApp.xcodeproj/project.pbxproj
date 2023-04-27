@@ -14,6 +14,15 @@
 		3FE00E2029F6C5BE009281A5 /* NetworkingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E1F29F6C5BE009281A5 /* NetworkingAppTests.swift */; };
 		3FE00E2A29F6C5BE009281A5 /* NetworkingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E2929F6C5BE009281A5 /* NetworkingAppUITests.swift */; };
 		3FE00E2C29F6C5BE009281A5 /* NetworkingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E2B29F6C5BE009281A5 /* NetworkingAppUITestsLaunchTests.swift */; };
+		3FE00E4629F95DB7009281A5 /* AnimalListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E4529F95DB7009281A5 /* AnimalListRequest.swift */; };
+		3FE00E4929F95F60009281A5 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE00E4829F95F60009281A5 /* Networking.framework */; };
+		3FE00E4A29F95F60009281A5 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE00E4829F95F60009281A5 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3FE00E4E29F964DA009281A5 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E4D29F964DA009281A5 /* ApiConstants.swift */; };
+		3FE00E5029F965E7009281A5 /* FetchAnimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E4F29F965E7009281A5 /* FetchAnimals.swift */; };
+		3FE00E5229F96629009281A5 /* AnimalsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E5129F96629009281A5 /* AnimalsListViewModel.swift */; };
+		3FE00E5529F967D6009281A5 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E5429F967D6009281A5 /* Animal.swift */; };
+		3FE00E5729F96996009281A5 /* AnimalsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E5629F96996009281A5 /* AnimalsListView.swift */; };
+		3FE00E5929F96FDF009281A5 /* AnimalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E5829F96FDF009281A5 /* AnimalRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +42,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3FE00E4B29F95F60009281A5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3FE00E4A29F95F60009281A5 /* Networking.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3FE00E0B29F6C5BD009281A5 /* NetworkingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE00E0E29F6C5BD009281A5 /* NetworkingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAppApp.swift; sourceTree = "<group>"; };
@@ -44,6 +67,14 @@
 		3FE00E2529F6C5BE009281A5 /* NetworkingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE00E2929F6C5BE009281A5 /* NetworkingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAppUITests.swift; sourceTree = "<group>"; };
 		3FE00E2B29F6C5BE009281A5 /* NetworkingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3FE00E4529F95DB7009281A5 /* AnimalListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListRequest.swift; sourceTree = "<group>"; };
+		3FE00E4829F95F60009281A5 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FE00E4D29F964DA009281A5 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		3FE00E4F29F965E7009281A5 /* FetchAnimals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAnimals.swift; sourceTree = "<group>"; };
+		3FE00E5129F96629009281A5 /* AnimalsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsListViewModel.swift; sourceTree = "<group>"; };
+		3FE00E5429F967D6009281A5 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		3FE00E5629F96996009281A5 /* AnimalsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsListView.swift; sourceTree = "<group>"; };
+		3FE00E5829F96FDF009281A5 /* AnimalRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE00E4929F95F60009281A5 /* Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +110,7 @@
 				3FE00E1E29F6C5BE009281A5 /* NetworkingAppTests */,
 				3FE00E2829F6C5BE009281A5 /* NetworkingAppUITests */,
 				3FE00E0C29F6C5BD009281A5 /* Products */,
+				3FE00E4729F95F60009281A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +127,10 @@
 		3FE00E0D29F6C5BD009281A5 /* NetworkingApp */ = {
 			isa = PBXGroup;
 			children = (
+				3FE00E4D29F964DA009281A5 /* ApiConstants.swift */,
 				3FE00E0E29F6C5BD009281A5 /* NetworkingAppApp.swift */,
 				3FE00E1029F6C5BD009281A5 /* ContentView.swift */,
+				3FE00E4029F95D55009281A5 /* AnimalsList */,
 				3FE00E1229F6C5BE009281A5 /* Assets.xcassets */,
 				3FE00E1429F6C5BE009281A5 /* Preview Content */,
 			);
@@ -127,6 +162,67 @@
 			path = NetworkingAppUITests;
 			sourceTree = "<group>";
 		};
+		3FE00E4029F95D55009281A5 /* AnimalsList */ = {
+			isa = PBXGroup;
+			children = (
+				3FE00E5329F967CA009281A5 /* Model */,
+				3FE00E4329F95D8F009281A5 /* Views */,
+				3FE00E4229F95D88009281A5 /* ViewModels */,
+				3FE00E4129F95D69009281A5 /* Services */,
+				3FE00E4429F95D9B009281A5 /* Requests */,
+			);
+			path = AnimalsList;
+			sourceTree = "<group>";
+		};
+		3FE00E4129F95D69009281A5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3FE00E4F29F965E7009281A5 /* FetchAnimals.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3FE00E4229F95D88009281A5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3FE00E5129F96629009281A5 /* AnimalsListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3FE00E4329F95D8F009281A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3FE00E5629F96996009281A5 /* AnimalsListView.swift */,
+				3FE00E5829F96FDF009281A5 /* AnimalRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3FE00E4429F95D9B009281A5 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				3FE00E4529F95DB7009281A5 /* AnimalListRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		3FE00E4729F95F60009281A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FE00E4829F95F60009281A5 /* Networking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3FE00E5329F967CA009281A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3FE00E5429F967D6009281A5 /* Animal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +233,7 @@
 				3FE00E0729F6C5BD009281A5 /* Sources */,
 				3FE00E0829F6C5BD009281A5 /* Frameworks */,
 				3FE00E0929F6C5BD009281A5 /* Resources */,
+				3FE00E4B29F95F60009281A5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -257,6 +354,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE00E5029F965E7009281A5 /* FetchAnimals.swift in Sources */,
+				3FE00E4E29F964DA009281A5 /* ApiConstants.swift in Sources */,
+				3FE00E5229F96629009281A5 /* AnimalsListViewModel.swift in Sources */,
+				3FE00E4629F95DB7009281A5 /* AnimalListRequest.swift in Sources */,
+				3FE00E5929F96FDF009281A5 /* AnimalRow.swift in Sources */,
+				3FE00E5729F96996009281A5 /* AnimalsListView.swift in Sources */,
+				3FE00E5529F967D6009281A5 /* Animal.swift in Sources */,
 				3FE00E1129F6C5BD009281A5 /* ContentView.swift in Sources */,
 				3FE00E0F29F6C5BD009281A5 /* NetworkingAppApp.swift in Sources */,
 			);

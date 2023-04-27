@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol NetworkingManagerProtocol {
+public protocol NetworkingManagerProtocol {
     func load(_ request: RequestProtocol) async throws -> Data
     func load<T: Decodable>(_ request: RequestProtocol) async throws -> T
 }
 
-extension NetworkingManagerProtocol {
+public extension NetworkingManagerProtocol {
     func load<T: Decodable>(_ request: RequestProtocol) async throws -> T {
         let data = try await load(request)
         let decoder = JSONDecoder()
@@ -21,14 +21,14 @@ extension NetworkingManagerProtocol {
     }
 }
 
-class NetworkingManager: NetworkingManagerProtocol {
+public class NetworkingManager: NetworkingManagerProtocol {
     private let urlSession: URLSession
     
-    init(urlSession: URLSession = URLSession.shared) {
+    public init(urlSession: URLSession = URLSession.shared) {
         self.urlSession = urlSession
     }
     
-    func load(_ request: RequestProtocol) async throws -> Data {
+    public func load(_ request: RequestProtocol) async throws -> Data {
         let (data, response) = try await urlSession.data(for: request.createURLRequest())
         guard let httpResponse = response as? HTTPURLResponse,
               httpResponse.statusCode == 200
