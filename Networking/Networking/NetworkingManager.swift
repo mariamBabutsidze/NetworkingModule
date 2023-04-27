@@ -13,10 +13,12 @@ public protocol NetworkingManagerProtocol {
 }
 
 public extension NetworkingManagerProtocol {
+    
     func load<T: Decodable>(_ request: RequestProtocol) async throws -> T {
         let data = try await load(request)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .millisecondsSince1970
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         return try decoder.decode(T.self, from: data)
     }
 }
@@ -29,7 +31,13 @@ public class NetworkingManager: NetworkingManagerProtocol {
     }
     
     public func load(_ request: RequestProtocol) async throws -> Data {
+        print(request.host)
+        print(request.headers)
+        print(request.body)
+        print(request.path)
         let (data, response) = try await urlSession.data(for: request.createURLRequest())
+        print(response)
+        print(data)
         guard let httpResponse = response as? HTTPURLResponse,
               httpResponse.statusCode == 200
         else {
@@ -37,5 +45,4 @@ public class NetworkingManager: NetworkingManagerProtocol {
         }
         return data
     }
-
 }

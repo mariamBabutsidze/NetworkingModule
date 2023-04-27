@@ -9,9 +9,9 @@ import Foundation
 import Networking
 
 actor FetchAnimalsService {
-    private let requestManager: NetworkingManagerProtocol
+    private let requestManager: ApiManagerProtocol
     
-    init(requestManager: NetworkingManagerProtocol) {
+    init(requestManager: ApiManagerProtocol) {
         self.requestManager = requestManager
     }
 }
@@ -19,7 +19,7 @@ actor FetchAnimalsService {
 extension FetchAnimalsService: AnimalsFetcher {
     func fetchAnimals() async throws -> [Animal] {
         let requestData = AnimalListRequest.getAnimals
-        let animalsContainer: AnimalsContainer = try await requestManager.load(requestData)
+        let animalsContainer: AnimalsContainer = try await requestManager.load(with: requestData)
         return animalsContainer.animals
     }
 }

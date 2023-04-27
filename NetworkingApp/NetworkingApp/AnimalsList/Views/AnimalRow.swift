@@ -17,7 +17,7 @@ struct AnimalRow: View {
         self.animal = animal
         animalName = animal.name
         animalType = animal.type
-        animalDescription = animal.description
+        animalDescription = animal.description ?? ""
     }
     
     var body: some View {

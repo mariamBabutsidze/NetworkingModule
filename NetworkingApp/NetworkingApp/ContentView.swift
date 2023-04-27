@@ -15,7 +15,7 @@ struct ContentView: View {
                 viewModel: AnimalsListViewModel(
                     animalFetcher: FetchAnimalsService(
                         requestManager:
-                            NetworkingManager()
+                            ApiManager()
                     )
                 )
             )

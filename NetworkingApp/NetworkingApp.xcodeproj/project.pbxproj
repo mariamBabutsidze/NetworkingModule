@@ -23,6 +23,11 @@
 		3FE00E5529F967D6009281A5 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E5429F967D6009281A5 /* Animal.swift */; };
 		3FE00E5729F96996009281A5 /* AnimalsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E5629F96996009281A5 /* AnimalsListView.swift */; };
 		3FE00E5929F96FDF009281A5 /* AnimalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E5829F96FDF009281A5 /* AnimalRow.swift */; };
+		3FE00E6229FAD898009281A5 /* AccessTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E6129FAD898009281A5 /* AccessTokenManager.swift */; };
+		3FE00E6629FAD8D5009281A5 /* APIToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E6529FAD8D5009281A5 /* APIToken.swift */; };
+		3FE00E6829FAD8F5009281A5 /* AppUserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E6729FAD8F5009281A5 /* AppUserDefaultsKeys.swift */; };
+		3FE00E6A29FAD9BB009281A5 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E6929FAD9BB009281A5 /* ApiManager.swift */; };
+		3FE00E6C29FADAA3009281A5 /* AuthTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E6B29FADAA3009281A5 /* AuthTokenRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +80,11 @@
 		3FE00E5429F967D6009281A5 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		3FE00E5629F96996009281A5 /* AnimalsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsListView.swift; sourceTree = "<group>"; };
 		3FE00E5829F96FDF009281A5 /* AnimalRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalRow.swift; sourceTree = "<group>"; };
+		3FE00E6129FAD898009281A5 /* AccessTokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenManager.swift; sourceTree = "<group>"; };
+		3FE00E6529FAD8D5009281A5 /* APIToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIToken.swift; sourceTree = "<group>"; };
+		3FE00E6729FAD8F5009281A5 /* AppUserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserDefaultsKeys.swift; sourceTree = "<group>"; };
+		3FE00E6929FAD9BB009281A5 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		3FE00E6B29FADAA3009281A5 /* AuthTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +137,7 @@
 		3FE00E0D29F6C5BD009281A5 /* NetworkingApp */ = {
 			isa = PBXGroup;
 			children = (
-				3FE00E4D29F964DA009281A5 /* ApiConstants.swift */,
+				3FE00E6029FAD879009281A5 /* AppConfigurations */,
 				3FE00E0E29F6C5BD009281A5 /* NetworkingAppApp.swift */,
 				3FE00E1029F6C5BD009281A5 /* ContentView.swift */,
 				3FE00E4029F95D55009281A5 /* AnimalsList */,
@@ -221,6 +231,27 @@
 				3FE00E5429F967D6009281A5 /* Animal.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3FE00E6029FAD879009281A5 /* AppConfigurations */ = {
+			isa = PBXGroup;
+			children = (
+				3FE00E6D29FADB6A009281A5 /* Token */,
+				3FE00E6729FAD8F5009281A5 /* AppUserDefaultsKeys.swift */,
+				3FE00E4D29F964DA009281A5 /* ApiConstants.swift */,
+				3FE00E6929FAD9BB009281A5 /* ApiManager.swift */,
+			);
+			path = AppConfigurations;
+			sourceTree = "<group>";
+		};
+		3FE00E6D29FADB6A009281A5 /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				3FE00E6529FAD8D5009281A5 /* APIToken.swift */,
+				3FE00E6129FAD898009281A5 /* AccessTokenManager.swift */,
+				3FE00E6B29FADAA3009281A5 /* AuthTokenRequest.swift */,
+			);
+			path = Token;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE00E6829FAD8F5009281A5 /* AppUserDefaultsKeys.swift in Sources */,
 				3FE00E5029F965E7009281A5 /* FetchAnimals.swift in Sources */,
 				3FE00E4E29F964DA009281A5 /* ApiConstants.swift in Sources */,
 				3FE00E5229F96629009281A5 /* AnimalsListViewModel.swift in Sources */,
@@ -361,8 +393,12 @@
 				3FE00E5929F96FDF009281A5 /* AnimalRow.swift in Sources */,
 				3FE00E5729F96996009281A5 /* AnimalsListView.swift in Sources */,
 				3FE00E5529F967D6009281A5 /* Animal.swift in Sources */,
+				3FE00E6A29FAD9BB009281A5 /* ApiManager.swift in Sources */,
+				3FE00E6229FAD898009281A5 /* AccessTokenManager.swift in Sources */,
 				3FE00E1129F6C5BD009281A5 /* ContentView.swift in Sources */,
+				3FE00E6C29FADAA3009281A5 /* AuthTokenRequest.swift in Sources */,
 				3FE00E0F29F6C5BD009281A5 /* NetworkingAppApp.swift in Sources */,
+				3FE00E6629FAD8D5009281A5 /* APIToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

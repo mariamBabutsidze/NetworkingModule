@@ -15,6 +15,10 @@ enum AnimalListRequest: RequestProtocol {
         APIConstants.host
     }
     
+    var headers: [String : String] {
+        return ["Authorization": AccessTokenManager.shared.fetchToken()]
+    }
+    
     var path: String {
         "/v2/animals"
     }

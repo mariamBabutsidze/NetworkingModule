@@ -18,7 +18,7 @@ struct Animal: Codable {
     var ranking: Int? = 0
     let photos: [PhotoSizes]
     let name: String
-    let description: String
+    let description: String?
     
     var picture: URL? {
         photos.first?.medium ?? photos.first?.large

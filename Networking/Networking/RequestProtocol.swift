@@ -34,12 +34,15 @@ public extension RequestProtocol {
         components.scheme = "https"
         components.host = host
         components.path = path
-        components.queryItems = query.map { URLQueryItem(name: $0, value: $1) }
+        
+        if !query.isEmpty {
+            components.queryItems = query.map { URLQueryItem(name: $0, value: $1) }
+        }
         
         guard let url = components.url else {
             throw NetworkError.invalidUrl
         }
-        
+        print(url)
         var request = URLRequest(url: url)
         request.httpMethod = requestType.rawValue
         request.allHTTPHeaderFields = headers
@@ -48,6 +51,7 @@ public extension RequestProtocol {
         if !body.isEmpty && request.httpMethod != RequestType.GET.rawValue {
             request.httpBody = try JSONSerialization.data(withJSONObject: body)
         }
+        print(request)
         return request
     }
 }
