@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OSLog
 
 public protocol NetworkingManagerProtocol {
     func load(_ request: RequestProtocol) async throws -> Data
@@ -19,7 +20,16 @@ public extension NetworkingManagerProtocol {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .millisecondsSince1970
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        return try decoder.decode(T.self, from: data)
+        if let jsonString = String(data: data, encoding: .utf8) {
+            Log.logger.log("Response Json: \(jsonString)")
+        }
+        do {
+            let decoded = try decoder.decode(T.self, from: data)
+            return decoded
+        } catch {
+            Log.logger.log(level: .error, "Parsing error \(error)")
+            throw error
+        }
     }
 }
 
@@ -31,18 +41,19 @@ public class NetworkingManager: NetworkingManagerProtocol {
     }
     
     public func load(_ request: RequestProtocol) async throws -> Data {
-        print(request.host)
-        print(request.headers)
-        print(request.body)
-        print(request.path)
+        Log.logger.log("Host: \(request.host)")
+        Log.logger.log("Path: \(request.path)")
+        Log.logger.log("Headers: \(request.headers)")
+        Log.logger.log("Query: \(request.query)")
+        Log.logger.log("Body: \(request.body)")
         let (data, response) = try await urlSession.data(for: request.createURLRequest())
-        print(response)
-        print(data)
         guard let httpResponse = response as? HTTPURLResponse,
               httpResponse.statusCode == 200
         else {
+            Log.logger.log("InvalidResponse: \(response)")
             throw NetworkError.invalidResponse
         }
+        Log.logger.log("Data: \(data)")
         return data
     }
 }

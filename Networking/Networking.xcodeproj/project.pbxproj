@@ -15,6 +15,7 @@
 		3FE00E3B29F6CD65009281A5 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E3A29F6CD65009281A5 /* RequestType.swift */; };
 		3FE00E3D29F94547009281A5 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E3C29F94547009281A5 /* NetworkError.swift */; };
 		3FE00E3F29F94786009281A5 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E3E29F94786009281A5 /* NetworkingManager.swift */; };
+		3FE00E6F29FC2ACF009281A5 /* LoggerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE00E6E29FC2ACF009281A5 /* LoggerInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		3FE00E3A29F6CD65009281A5 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		3FE00E3C29F94547009281A5 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		3FE00E3E29F94786009281A5 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		3FE00E6E29FC2ACF009281A5 /* LoggerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				3FE00E3829F6CC24009281A5 /* RequestProtocol.swift */,
 				3FE00E3A29F6CD65009281A5 /* RequestType.swift */,
 				3FE00E3E29F94786009281A5 /* NetworkingManager.swift */,
+				3FE00E6E29FC2ACF009281A5 /* LoggerInfo.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FE00DEC29F6C138009281A5 /* Networking.docc in Sources */,
+				3FE00E6F29FC2ACF009281A5 /* LoggerInfo.swift in Sources */,
 				3FE00E3D29F94547009281A5 /* NetworkError.swift in Sources */,
 				3FE00E3929F6CC24009281A5 /* RequestProtocol.swift in Sources */,
 				3FE00E3F29F94786009281A5 /* NetworkingManager.swift in Sources */,

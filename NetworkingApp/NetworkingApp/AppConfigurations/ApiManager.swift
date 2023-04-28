@@ -31,7 +31,6 @@ class ApiManager: ApiManagerProtocol {
         }
         
         let token: APIToken = try await networkManager.load(AuthTokenRequest.auth)
-        print(token)
         try accessTokenManager.refreshWith(apiToken: token)
     }
     

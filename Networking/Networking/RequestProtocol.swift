@@ -42,7 +42,6 @@ public extension RequestProtocol {
         guard let url = components.url else {
             throw NetworkError.invalidUrl
         }
-        print(url)
         var request = URLRequest(url: url)
         request.httpMethod = requestType.rawValue
         request.allHTTPHeaderFields = headers
@@ -51,7 +50,6 @@ public extension RequestProtocol {
         if !body.isEmpty && request.httpMethod != RequestType.GET.rawValue {
             request.httpBody = try JSONSerialization.data(withJSONObject: body)
         }
-        print(request)
         return request
     }
 }
