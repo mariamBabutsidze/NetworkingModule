@@ -62,3 +62,9 @@ struct AnimalRow: View {
         .accessibilityCustomContent("Description", animalDescription)
     }
 }
+
+struct AnimalRow_Previews: PreviewProvider {
+  static var previews: some View {
+      AnimalRow(animal: Animal.mock.first!)
+  }
+}
